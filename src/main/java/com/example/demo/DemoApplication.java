@@ -3,10 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -151,4 +148,14 @@ public class DemoApplication {
     return pairs;
 
   }
+  public void reverseString(char[] s) {
+    System.out.println(s);
+    int length = s.length;
+    char[] out = new char[length];
+    IntStream.range(0, length).forEach(val -> {
+      System.out.println(val);
+      out[val] = s[length -val];
+    });
+  }
+
 }
